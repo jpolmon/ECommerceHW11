@@ -53,7 +53,7 @@ router.put('/:id', (req, res) => {
             id: req.params.id
           }
         });
-        res.status(200).json({ message: 'Category added!' })
+        res.status(200).json({ message: 'Category updated!' })
       }
     } catch (err) {
       status(500).json(err);
@@ -73,7 +73,7 @@ router.delete('/:id', async (req, res) => {
       res.status(404).json({ message: 'No category found with this id!' });
       return;    
     }
-    res.status(200).json({message: 'Category removed'});
+    res.status(200).json({message: 'Category removed!'});
   } catch (err) {
       console.log(err);
       res.status(500).json(err);
